@@ -4,8 +4,8 @@ require File.expand_path('../lib/mechanize_clip/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Yury Korolev"]
   gem.email         = ["yury.korolev@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Downloads files to temp files with Mechanize gem}
+  gem.summary       = %q{Mechanize url fetcher for paperclip}
   gem.homepage      = ""
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
