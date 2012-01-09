@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["yury.korolev@gmail.com"]
   gem.description   = %q{Downloads files to temp files with Mechanize gem}
   gem.summary       = %q{Mechanize url fetcher for paperclip}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/anjlab/mechanize_clip"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
