@@ -21,6 +21,9 @@ Or install it yourself as:
 
 ```ruby
 user.avatar = MechanizeClip.get 'http://www.google.ru/images/nav_logo99.png'
+
+# it follows redirects
+user.avatar = MechanizeClip.get 'http://bit.ly/cHbjf'
 ```
 
 ## Contributing
