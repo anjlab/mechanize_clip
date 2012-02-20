@@ -3,11 +3,6 @@ require "tempfile"
 require "mechanize"
 
 module MechanizeClip
-
-  # Mechanize::Download v2.1 doesn't define filename accessor
-  class DownloadWithFilename < ::Mechanize::Download
-    attr :filename
-  end
   
   # Temfile capatible with paperclip
   class TmpFile < Tempfile
@@ -56,7 +51,6 @@ module MechanizeClip
   def get! url
     agent = Mechanize.new
     # agent.max_file_buffer = 0 # always download to temp file
-    agent.pluggable_parser.default = DownloadWithFilename
     TmpFile.new agent.get(url)
   end
 

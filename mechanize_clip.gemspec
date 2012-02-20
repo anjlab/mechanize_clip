@@ -15,6 +15,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = MechanizeClip::VERSION
 
-  gem.add_dependency "mechanize", ">= 2.1.0"
+  gem.add_dependency "mechanize", ">= 2.2.0"
   gem.add_development_dependency "rspec", ">= 2.8"
 end
