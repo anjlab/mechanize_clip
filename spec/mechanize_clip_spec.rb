@@ -26,7 +26,7 @@ describe MechanizeClip do
     file.original_filename.should == "logo.png"
   end
 
-  it "detectes file names" do
+  it "detects file names" do
     file = subject.get! "https://a248.e.akamai.net/assets.github.com/images/modules/header/logov7@4x-hover.png?1324325376"
     file.original_filename.should == "logov7@4x-hover.png"
   end
