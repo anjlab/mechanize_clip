@@ -72,7 +72,11 @@ module MechanizeClip
   end
 
   def from_raw request, filename_param = 'qqfile'
-    RawTmpFile.new request, filename_param
+    if request.params[filename_param].respond_to?(:original_filename)
+      request.params[filename_param]
+    else
+      RawTmpFile.new request, "_#{filename_param}"
+    end
   end
 
   module_function :get
