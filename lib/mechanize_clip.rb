@@ -55,9 +55,10 @@ module MechanizeClip
   
   # Downloads url contents to temp file using Mechanize
   # returns nil if something bad happend
-  def get url
+  # allow for custom agents
+  def get url, m_agent=Mechanize.new
     begin
-      get! url
+      get! url, m_agent
     rescue
       nil
     end
@@ -65,8 +66,8 @@ module MechanizeClip
 
   # Downloads url contents to temp file using Mechanize
   # raise exception if something bad happend
-  def get! url
-    agent = Mechanize.new
+  def get! url, m_agent= Mechanize.new
+    agent = m_agent
     # agent.max_file_buffer = 0 # always download to temp file
     PageTmpFile.new agent.get(url)
   end
