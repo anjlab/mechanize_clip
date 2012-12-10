@@ -27,7 +27,7 @@ user.avatar = MechanizeClip.get 'http://bit.ly/cHbjf'
 
 # it creates temp files from raw requests
 # useful for ajax uploaders like https://github.com/valums/file-uploader
-user.avatar = MechanizeClie.from_raw request
+user.avatar = MechanizeClip.from_raw request
 ```
 
 ## Contributing
